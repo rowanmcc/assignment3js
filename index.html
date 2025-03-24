@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character encoding and responsive design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Page title -->
+  <title>Pizza Order Form</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Link to external JS file with defer to ensure it loads after the DOM -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- Header section with the main title and student info -->
+  <header>
+    <h1>Welcome to Pizza Palace!</h1>
+    <!-- Placeholder for dynamically added student info -->
+    <p id="student-info"></p>
+  </header>
+
+  <!-- Pizza order form -->
+  <form id="pizza-order-form">
+    <h2>Build Your Pizza</h2>
+
+    <!-- Customer information fieldset -->
+    <fieldset>
+      <legend>Your Information</legend>
+      <!-- Name input -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Phone input -->
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <!-- Address input -->
+      <label for="address">Delivery Address:</label>
+      <textarea id="address" name="address" required></textarea>
+    </fieldset>
+
+    <!-- Pizza size fieldset -->
+    <fieldset>
+      <legend>Pizza Size</legend>
+      <!-- Size options (radio buttons) -->
+      <label>
+        <input type="radio" name="size" value="small" required> Small
+      </label>
+      <label>
+        <input type="radio" name="size" value="medium"> Medium
+      </label>
+      <label>
+        <input type="radio" name="size" value="large"> Large
+      </label>
+    </fieldset>
+
+    <!-- Toppings fieldset -->
+    <fieldset>
+      <legend>Toppings (Select as many as you want)</legend>
+      <!-- Toppings options (checkboxes) -->
+      <label>
+        <input type="checkbox" name="toppings" value="pepperoni"> Pepperoni
+      </label>
+      <label>
+        <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms
+      </label>
+      <label>
+        <input type="checkbox" name="toppings" value="onions"> Onions
+      </label>
+      <label>
+        <input type="checkbox" name="toppings" value="sausage"> Sausage
+      </label>
+      <label>
+        <input type="checkbox" name="toppings" value="olives"> Olives
+      </label>
+    </fieldset>
+
+    <!-- Crust type fieldset -->
+    <fieldset>
+      <legend>Crust Type</legend>
+      <!-- Crust options (radio buttons) -->
+      <label>
+        <input type="radio" name="crust" value="thin" required> Thin Crust
+      </label>
+      <label>
+        <input type="radio" name="crust" value="thick"> Thick Crust
+      </label>
+      <label>
+        <input type="radio" name="crust" value="stuffed"> Stuffed Crust
+      </label>
+    </fieldset>
+
+    <!-- Special instructions fieldset -->
+    <fieldset>
+      <legend>Special Instructions</legend>
+      <!-- Textarea for additional instructions -->
+      <textarea id="instructions" name="instructions" placeholder="Any special requests?"></textarea>
+    </fieldset>
+
+    <!-- Submit button -->
+    <button type="submit">Place Order</button>
+  </form>
+
+  <!-- Output section for displaying the pizza order details -->
+  <div id="order-output" class="hidden">
+    <h2>Your Pizza Order</h2>
+    <!-- Placeholder for dynamically added order details -->
+    <p id="order-details"></p>
+    <!-- Placeholder for dynamically added total price -->
+    <p id="order-price"></p>
+  </div>
+</body>
+</html>
